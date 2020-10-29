@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-clr: #6C3483;
+    --text-clr1: #2471A3; 
+    --text-clr2: #E10F29;
+}
+
+p {
+    color: var(--text-clr);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-clr);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--text-clr);
+}
+
+h2 {
+    color: var(--text-clr1);
+}
+
+.card {
+    border: none;
+}
+
+.main-cart {
+    background-color: white;
+}
+
+.product-img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product-name {
+    color: var(--text-clr1);
+    text-transform: capitalize;
+    font-size: 1.4rem;
+}
+
+.card-title p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.remove-wish p {
+    font-size: 0.8 rem;
+}
+
+h3 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #21618C;
+}
+
+.set-quantity {
+    position: relative;
+}
+
+.set-quantity::after {
+    content: "(1 Piece)";
+    position: absolute;
+    width: auto;
+    height: auto;
+    right: 3rem;
+    bottom: -30px;
+    font-size: 0.8rem;
+    color: #21618C;
+}
+
+.page-link {
+    width: 50px;
+    font-size: 1rem;
+    align-items: center;
+    color: #196F3D;
+}
+
+.page-link:focus {
+    box-shadow: none;
+}
+
+.page-item input {
+    font-size: 16px;
+    text-align: center;
+}
+
+.price-individual p {
+    font-size: 1.1rem;
+}
+
+.fa-trash-alt
+.fa-heart, :hover {
+    color: var(--text-clr2);
+}
+
+h5 {
+    color: #21618C;
+}
+
+h5:hover {
+    color: #21618C;
+}
