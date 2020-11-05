@@ -1,113 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap");
+
+/*------------Navigation Bar & card design------------*/
+.navbar {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  background-color: #dce5eb;
+  z-index: 1;
+}
+
+.navbar-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: #21618c;
+}
+
+.nav-icon:hover {
+  font-size: 20px;
+  color: #021f31;
+}
+
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-items {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  border-radius: 30%;
+  padding: 0 2px;
+  color: white;
+  background: rgb(105, 31, 9);
+}
+
+/*-----------------Social media bar------------- */
+
+.right-bar {
+  width: 50px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.social-media {
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  background: transparent;
+}
+
+.social-media img {
+  width: 25px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+/*-------------Body starts here----------*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --text-clr: #6C3483;
-    --text-clr1: #2471A3; 
-    --text-clr2: #E10F29;
+  --text-clr: black;
+  --text-clr1: #2471a3;
+  --text-clr2: #000000;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
 }
 
 p {
-    color: var(--text-clr);
+  color: black;
 }
 
 a {
-    text-decoration: none;
-    color: var(--text-clr);
+  text-decoration: none;
+  color: var(--text-clr);
 }
 
 a:hover {
-    text-decoration: none;
-    color: var(--text-clr);
+  text-decoration: none;
+  color: var(--text-clr);
 }
 
 h2 {
-    color: var(--text-clr1);
+  color: rgb(7, 41, 92);
 }
 
 .card {
-    border: none;
+  border: none;
+  background-color: white;
 }
 
 .main-cart {
-    background-color: white;
+  background-color: #d5f5e3;
 }
 
 .product-img {
-    max-width: 200px;
-    max-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .product-name {
-    color: var(--text-clr1);
-    text-transform: capitalize;
-    font-size: 1.4rem;
+  text-transform: capitalize;
+  font-size: 1.4rem;
 }
 
 .card-title p {
-    font-size: 0.8rem;
-    font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .remove-wish p {
-    font-size: 0.8 rem;
+  font-size: 0.8 rem;
 }
 
 h3 {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #21618C;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #21618c;
 }
 
 .set-quantity {
-    position: relative;
+  position: relative;
 }
 
 .set-quantity::after {
-    content: "(1 Piece)";
-    position: absolute;
-    width: auto;
-    height: auto;
-    right: 3rem;
-    bottom: -30px;
-    font-size: 0.8rem;
-    color: #21618C;
+  content: "(1 Piece)";
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 3rem;
+  bottom: -30px;
+  font-size: 0.8rem;
+  color: rgb(7, 41, 92);
+  font-weight: bold;
 }
 
 .page-link {
-    width: 50px;
-    font-size: 1rem;
-    align-items: center;
-    color: #196F3D;
+  width: 50px;
+  font-size: 1rem;
+  align-items: center;
+  color: rgb(7, 41, 92);
 }
 
 .page-link:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .page-item input {
-    font-size: 16px;
-    text-align: center;
+  font-size: 16px;
+  text-align: center;
 }
 
 .price-individual p {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
+  color: #21618c;
+  font-weight: bold;
 }
 
-.fa-trash-alt
-.fa-heart, :hover {
-    color: var(--text-clr2);
+.fas fa-heart,
+:hover {
+  color: red;
+  cursor: pointer;
 }
 
 h5 {
-    color: #21618C;
+  color: #21618c;
+  font-weight: bold;
 }
 
 h5:hover {
-    color: #21618C;
+  color: #21618c;
+}
+
+p {
+  color: #0e7dc7;
+}
+
+.img-fluid:hover {
+  width: 120px;
+  transition: width 200ms ease;
+}
+
+.fas fa-bars:hover {
+  color: black;
 }

@@ -10,7 +10,43 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1 style="color: #2471A3;text-align: center; margin-top:10px;">My Shopping Cart</h1>
+  <nav class="navbar">
+      <div class="navbar-center">
+        <span class="nav-icon">
+            <a href="index.html" target="#"><i class="fas fa-home fa-1.5x" style="color: #21618c;"></i></a>
+        </span>
+        <h1 style="color: rgb(7, 41, 92);text-align: center; font-size: 25px;">My Shopping Cart</h1>
+         <div class="cart-btn">
+            <span class="nav-icon">
+                <i class="fas fa-cart-plus fa-1.5x"></i>
+            </span>
+            <div class="cart-items" id="cart-value">0</div>
+         </div> 
+   
+        </div>
+    </nav>
+
+<!-- Designing social media link -->
+
+<div class="right-bar">
+    <div class="social-media">
+      <a href="http://facebook.com/sammyh.mukta" target="_blank"
+        ><img src="./images/fbicon.png" alt="" style="width: 40px"
+      /></a>
+      <a href="https://www.instagram.com/sammymukta/" target="_blank"
+        ><img src="./images/inst-img.jpg" alt=""
+      /></a>
+      <a href="https://github.com/hossain1527" target="_blank" alt=""
+        ><img src="./images/GitHub-icon.png" alt=""
+      /></a>
+      <a href="https://www.linkedin.com/in/a-s-m-hossain-88423951/" target="_blank" alt=""
+      ><img src="./images/linkedin-img.png" alt=""
+    /></a>
+    </div>
+
+    
+  </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10 col-11 mx-auto">
@@ -18,7 +54,7 @@
                   <!-- Left side -->
                     <div class="col-md-12 col-lg-8 col-11 mx-auto main-cart mb-lg-0 mb-5 shadow">
                         <div class="card p-4">
-                            <h2 class="py-4 font-weight-bold">Own Cart (2 items)</h2>
+                            <h2 class="py-4 font-weight-bold">2 items</h2>
                             <div class="row">
                                 <!-- Cart image -->
                                 <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product-img">
@@ -30,19 +66,19 @@
                                     <div class="row">
                                         <!-- Product name -->
                                         <div class="col-6 card-title">
-                                            <h1 class="mb-4 product-name">Huawei P40 Pro</h1>
-                                            <p class="mb-3">Memory - 256GB</p>
-                                            <p class="mb-3">Camera - 50 MP</p>
-                                            <p class="mb-3">Chipset - Kirin 990 5G</p>
+                                            <h1 style="color: #21618c;" class="mb-4 product-name">Huawei P40 Pro</h1>
+                                            <p style="color: black;" class="mb-3">Memory - 256GB</p>
+                                            <p style="color: black;" class="mb-3">Camera - 50 MP</p>
+                                            <p style="color: black;" class="mb-3">Chipset - Kirin 990 5G</p>
                                         </div>
 
                                         <!-- Quantity increment/decrement -->
                                         <div class="col-6">
                                             <ul class="pagination justify-content-end set-quantity">
-                                                <li class="page-item"><button class="page-link" onclick="decreaseNum('textBox','itemval')" ><i class="fas fa-minus"></i>
+                                                <li class="page-item"><button class="page-link" onclick="decreaseNum('textBox','itemval','cart-value')" ><i class="fas fa-minus"></i>
                                                     </button></li>
                                                 <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textBox"></li>
-                                                <li class="page-item"><button class="page-link" onclick="increaseNum('textBox','itemval')" ><i class="fas fa-plus"></i></button></li>
+                                                <li class="page-item"><button class="page-link" onclick="increaseNum('textBox','itemval','cart-value')" ><i class="fas fa-plus"></i></button></li>
                                                 
                                             </ul>
                                         </div>
@@ -79,19 +115,19 @@
                                     <div class="row">
                                         <!-- Product name -->
                                         <div class="col-6 card-title">
-                                            <h1 class="mb-4 product-name">Samsung Galaxy S20</h1>
-                                            <p class="mb-3">Memory - 128GB</p>
-                                            <p class="mb-3">Camera - 64 MP</p>
-                                            <p class="mb-3">Chipset - Snapdragon 865</p>
+                                            <h1 style="color: #21618c;" class="mb-4 product-name">Samsung Galaxy S20</h1>
+                                            <p style="color: black;" class="mb-3">Memory - 128GB</p>
+                                            <p style="color: black;" class="mb-3">Camera - 64 MP</p>
+                                            <p style="color: black;" class="mb-3">Chipset - Snapdragon 865</p>
                                         </div>
 
                                         <!-- Quantity increment/decrement -->
                                         <div class="col-6">
                                             <ul class="pagination justify-content-end set-quantity">
-                                                <li class="page-item"><button class="page-link" onclick="decreaseNum('textBox1','itemval1')" ><i class="fas fa-minus"></i>
+                                                <li class="page-item"><button class="page-link" onclick="decreaseNum('textBox1','itemval1','cart-value')" ><i class="fas fa-minus"></i>
                                                     </button></li>
                                                 <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textBox1"></li>
-                                                <li class="page-item"><button class="page-link" onclick="increaseNum('textBox1','itemval1')" ><i class="fas fa-plus"></i></button></li>
+                                                <li class="page-item"><button class="page-link" onclick="increaseNum('textBox1','itemval1','cart-value')" ><i class="fas fa-plus"></i></button></li>
                                                 
                                             </ul>
                                         </div>
@@ -127,11 +163,11 @@
                             </div>
                             <div class="price-individual d-flex justify-content-between">
                                 <p>Shipping Charge</p>
-                                <p>$<span id="shippingValue">50.00</span></p>
+                                <p>$<span id="shippingValue">20.00</span></p>
                             </div>
                             <hr/>
                             <div class="total-amt d-flex justify-content-between font-weight-bold">
-                                <p>Total Amount (including VAT)</p>
+                                <p style="color: #0e7dc7;">Total Amount (including VAT)</p>
                                 <p>$<span id="total-cart-amount">0.00</span></p>
                             </div>
                             <button class="btn btn-primary text-uppercase">checkout</button>
@@ -140,7 +176,7 @@
                          <div class="discount-code mt-3 shadow">
                              <div class="card">
                                  <div class="card-body">
-                                     <a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
+                                     <a style="color: #21618c;" class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
                                      aria-expanded="false" aria-controls="collapseExample">
                                     Add a discount code (optional)
                                     <span><i class="fas fa-chevron-down pt-1"></i></span>
@@ -149,7 +185,7 @@
                                         <div class="mt-3">
                                             <input type="text" name="" id="discount-code1" class="form-control font-weight-bold"
                                             placeholder="Please enter your discount code">
-                                            <small id="error-throw" class="text-dark mt-3">Valid code: anar</small>                             
+                                            <small id="error-throw" class="text-dark mt-3">Valid code: Christian</small>                             
                                         </div>
                                         <button class="btn btn-primary btn-sm mt-3" onclick="discount_code('total-cart-amount')">Apply</button>
                                         
