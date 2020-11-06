@@ -3,6 +3,8 @@ let shipping_total = document.getElementById("shippingValue");
 let total_amount = document.getElementById("total-cart-amount");
 let err = document.getElementById("error-throw");
 
+//--------------Remove item-------------//
+
 const decreaseNum = (inputVal, itemPrice, cartValue) => {
   let itemValue = document.getElementById(inputVal);
   let produtPrice = document.getElementById(itemPrice);
@@ -24,6 +26,8 @@ const decreaseNum = (inputVal, itemPrice, cartValue) => {
       800;
   }
 };
+
+//--------------Add item-------------//
 
 const increaseNum = (inputVal, itemPrice, cartValue) => {
   let itemValue = document.getElementById(inputVal);
@@ -47,17 +51,26 @@ const increaseNum = (inputVal, itemPrice, cartValue) => {
   }
 };
 
+//-------Discount calculation-------------//
+
 const discount_code = (total_val) => {
   let discount_code = document.getElementById("discount-code1");
   let totalPriceCurr = parseInt(total_amount.innerHTML);
 
-  if (discount_code.value === "Christian") {
+  if (discount_code.value === "Christmas") {
     let totalPriceNew = totalPriceCurr - 40;
     total_amount.innerHTML = totalPriceNew;
     err.innerHTML = "Congrats! Code is valid";
     discount_code.value = "";
   } else {
-    err.innerHTML = "Wrong code! Valid code is Christian.";
+    err.innerHTML = "Wrong code! Valid code is Christmas.";
     discount_code.value = "";
   }
+};
+
+//--------------Delete item from the cart-------------//
+
+const delItem = () => {
+  let delDiv = document.getElementsByClassName("product-img");
+  delDiv.parentNode.removeChild(delDiv);
 };
